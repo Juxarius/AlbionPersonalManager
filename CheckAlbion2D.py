@@ -1,5 +1,6 @@
 from selenium import webdriver
 import time
+import amparser
 
 filePath = "monitored_prices.txt"
 url_base = "https://www.albiononline2d.com/en/item/id/"
@@ -9,27 +10,21 @@ postfix = "</b>"
 prices = []
 browser = webdriver.PhantomJS()
 
-NUM_DETAILS = 2
-# extention price
+NUM_DETAILS = 3
+NAME_INDEX = 1
+PRICE_INDEX = 2
+# extention name price
 
-def searchHtml(url):
+def getHtml(url):
     innerHTML = ""
     timesTried = 0
-    while keyId not in innerHTML and timesTried < 5:
+    while keyId not in innerHTML and timesTried < 3:
         browser.get(url)
         print("attempt :",timesTried)
         time.sleep(3)
         innerHTML = browser.execute_script("return document.body.innerHTML")
         timesTried += 1
-    while keyId in innerHTML:
-        currPos = innerHTML.find(keyId) + len(keyId)
-        innerHTML = innerHTML[currPos:]
-        startPos = innerHTML.find(prefix) + len(prefix)
-        endPos = innerHTML.find(postfix)
-        price_wanted = innerHTML[startPos:endPos]
-        # print("CurrPos:",currPos," startPos:",startPos," EndPos:",endPos)
-        return price_wanted
-        #innerHTML = innerHTML[endPos+len(postfix):]
+    return innerHTML
 
 def _load():
     file = open(filePath,"r")
@@ -49,9 +44,12 @@ def getPrices():
     for i in range(len(prices)):
         url = url_base + prices[i][0]
         print("Searching for "+prices[i][0])
-        price_gotten = searchHtml(url)
-        prices[i][1] = price_gotten
-        print("Finished Searching\nPrice obtained is ",price_gotten)
+        html = getHtml(url)
+        prices[i][1] = amparser.extractName(html)[0].replace(" ","_")
+        priceGotten = amparser.extractPrice(html, keyId)
+        if len(priceGotten) > 0:
+            prices[i][2] = priceGotten[0]
+        print("Finished Searching\n", prices[i][1], "is", prices[i][2])
 
 
 def _save():
@@ -61,8 +59,8 @@ def _save():
     for i in prices:
         try:
             for j in range(len(fileText)):
-                if i[0] in fileText[j] and i[1] is not None:
-                    fileText[j] = i[0]+" "+i[1]+"\n"
+                if i[0] in fileText[j] and i[2] is not None:
+                    fileText[j] = i[0]+" "+i[1]+" "+i[2]+"\n"
                     break;
         except:
             pass
@@ -71,16 +69,16 @@ def _save():
     file.close()
         
 def printPrices():
-    width = 30
+    width = 35
     for i in prices:
-        spacing = width - len(i[0])
-        print(i[0]," "*spacing,i[1])
+        spacing = width - len(i[NAME_INDEX])
+        print(i[NAME_INDEX]," "*spacing,i[PRICE_INDEX])
     
 
 def main():
     _load()
     print("Load complete")
-    getPrices()
+    # getPrices()
     _save()
     printPrices()
 
