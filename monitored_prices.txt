@@ -1,48 +1,50 @@
 #BASIC MATS
 
-T5_PLANKS Cedar_Planks 710
-T5_PLANKS_LEVEL1 Uncommon_Cedar_Planks 1650
-T5_METALBAR Titanium_Steel_Bar 629
-T5_METALBAR_LEVEL1 Uncommon_Titanium_Steel_Bar 2099
-T5_LEATHER Cured_Leather 736
-T5_LEATHER_LEVEL1 Uncommon_Cured_Leather 2663
-T5_CLOTH Ornate_Cloth 715
-T5_CLOTH_LEVEL1 Uncommon_Ornate_Cloth 1895
-T6_PLANKS Bloodoak_Planks 1735
-T6_PLANKS_LEVEL1 Uncommon_Bloodoak_Planks 
-T6_METALBAR Runite_Steel_Bar 1700
-T6_METALBAR_LEVEL1 Uncommon_Runite_Steel_Bar 3284
-T6_LEATHER Hardened_Leather 2185
-T6_LEATHER_LEVEL1 Uncommon_Hardened_Leather 5440
-T6_CLOTH Lavish_Cloth 1772
-T6_CLOTH_LEVEL1 Uncommon_Lavish_Cloth 3146
+T5_PLANKS Cedar_Planks 718
+T5_PLANKS_LEVEL1 Uncommon_Cedar_Planks 1739
+T5_METALBAR Titanium_Steel_Bar 729
+T5_METALBAR_LEVEL1 Uncommon_Titanium_Steel_Bar 2224
+T5_LEATHER Cured_Leather 725
+T5_LEATHER_LEVEL1 Uncommon_Cured_Leather 2731
+T5_CLOTH Ornate_Cloth 711
+T5_CLOTH_LEVEL1 Uncommon_Ornate_Cloth 2195
+T6_PLANKS Bloodoak_Planks 1737
+T6_PLANKS_LEVEL1 Uncommon_Bloodoak_Planks 3387
+T6_METALBAR Runite_Steel_Bar 1898
+T6_METALBAR_LEVEL1 Uncommon_Runite_Steel_Bar 3849
+T6_LEATHER Hardened_Leather 2379
+T6_LEATHER_LEVEL1 Uncommon_Hardened_Leather 5849
+T6_CLOTH Lavish_Cloth 1789
+T6_CLOTH_LEVEL1 Uncommon_Lavish_Cloth 3200
 
 #POTIONS
 
-T3_COMFREY Brightleaf_Comfrey 
-T4_BURDOCK Crenellated_Burdock 
-T5_TEASEL Dragon_Teasel 182
-T6_FOXGLOVE Elusive_Foxglove 245
-T7_MULLEIN Firetouched_Mullein 
-T8_YARROW Ghoul_Yarrow 
+T3_COMFREY Brightleaf_Comfrey 239
+T4_BURDOCK Crenellated_Burdock 254
+T5_TEASEL Dragon_Teasel 193
+T6_FOXGLOVE Elusive_Foxglove 259
+T7_MULLEIN Firetouched_Mullein 178
+T8_YARROW Ghoul_Yarrow 299
 
 #COOKING
 
-T3_FLOUR Flour 141
+T1_CARROT Carrots 120
+T1_FARM_CARROT_SEED Carrot_Seeds 497
+T3_FLOUR Flour 156
 T3_WHEAT Sheaf_of_Wheat 125
-T4_MILK Goat's_Milk 41
+T4_MILK Goat's_Milk 39
 T4_TURNIP Turnips 120
-T5_EGG Goose_Eggs 69
+T5_EGG Goose_Eggs 59
 T5_FARM_GOOSE_GROWN Goose 
-T5_CABBAGE Cabbage 121
-T5_MEAT Raw_Goose 170
-T6_MEAT Raw_Mutton 180
+T5_CABBAGE Cabbage 139
+T5_MEAT Raw_Goose 145
+T6_MEAT Raw_Mutton 185
 T6_FARM_SHEEP_GROWN Sheep 2300
-T6_MILK Sheep's_Milk 57
-T6_POTATO Potatoes 129
-T7_CORN Bundle_of_Corn 133
-T7_MEAT Raw_Pork 298
-T7_FARM_PIG_GROWN Pig 3350
-T8_MILK Cow's_Milk 85
-T8_MEAT Raw_Beef 286
-T8_FARM_COW_GROWN Cow 4590
+T6_MILK Sheep's_Milk 56
+T6_POTATO Potatoes 124
+T7_CORN Bundle_of_Corn 125
+T7_MEAT Raw_Pork 225
+T7_FARM_PIG_GROWN Pig 3196
+T8_MILK Cow's_Milk 78
+T8_MEAT Raw_Beef 376
+T8_FARM_COW_GROWN Cow 4629

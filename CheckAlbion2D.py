@@ -8,9 +8,11 @@ keyId = "Caerleon Market"
 prefix = "<b>"
 postfix = "</b>"
 prices = []
-browser = webdriver.PhantomJS()
+
 
 NUM_DETAILS = 3
+
+WEBCODE_INDEX = 0
 NAME_INDEX = 1
 PRICE_INDEX = 2
 # extention name price
@@ -41,6 +43,8 @@ def _load():
 
 def getPrices():
     global prices
+    global browser
+    browser = webdriver.PhantomJS()
     for i in range(len(prices)):
         url = url_base + prices[i][0]
         print("Searching for "+prices[i][0])
@@ -72,17 +76,16 @@ def printPrices():
     width = 35
     for i in prices:
         spacing = width - len(i[NAME_INDEX])
-        print(i[NAME_INDEX]," "*spacing,i[PRICE_INDEX])
+        print(i[NAME_INDEX].replace("_"," ")," "*spacing,i[PRICE_INDEX])
     
 
 def main():
     _load()
     print("Load complete")
-    # getPrices()
+    getPrices()
     _save()
     printPrices()
 
 if __name__ == '__main__':
     main()
 
-browser.quit
